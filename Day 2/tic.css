@@ -1,0 +1,35 @@
+h1{
+	text-align: center;
+}
+
+/*td{
+	padding:50px;
+}
+tr td:nth-of-type(1)
+{
+	border-right: 5px solid black;
+}
+tr td:nth-of-type(3)
+{
+	border-left: 5px solid black;
+}
+tr:nth-of-type(1) td{
+	border-bottom: 5px solid black;
+}
+
+tr:nth-of-type(3) td{
+	border-top: 5px solid black;
+}*/
+td{
+	width:100px;
+	height:100px;
+}
+.left-right{
+	border-right: 5px solid black;
+	border-left: 5px solid black;
+}
+.top-bottom{
+	border-bottom: 5px solid black;
+	border-top: 5px solid black;
+
+}
