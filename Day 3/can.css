@@ -1,0 +1,48 @@
+body{
+	font-family: 'Nunito', sans-serif;
+	background: #f09d4f;
+	
+}
+/*NAVBAR BRAND*/
+#headnav .navbar-brand{
+	color : white;
+	font-size:1.8rem;
+	font-weight: bold;
+	text-shadow: 2px 2px red;
+	font-family: 'Magneto', cursive;
+
+}
+/*NAVBAR ITEMS*/
+#headnav .nav-link{
+	color:white;
+	font-size:1.5rem;
+}
+#cont{
+	font-size:10rem;
+	color:red;
+}
+/*CONTENT HEADING*/
+#hcontent{
+	font-family: 'Racing Sans One', cursive;
+	text-shadow: 2px 2px red;
+
+}
+/*MAIN TITLE*/
+#hhcontent{
+	font-family: 'Magneto', cursive;
+	text-shadow: 5px 5px black;
+	font-weight: bold;
+	font-size:4rem;
+}
+/*CONTENT*/
+#ccontent{
+	color:white;
+}
+#cont span{
+	color:#EA1C2C;
+}
+/*NAVBAR SCROLLE TRANSITION*/
+.navbar.scrolled{
+	background: #c4640a;
+	transition: background 500ms;
+}
