@@ -1,0 +1,59 @@
+.container{
+    margin:auto;
+    max-width:600px;
+}
+h1{
+    color:white;
+    text-align:center;
+    background:steelblue;
+    margin:0;
+    font-weight: normal;
+    padding:20px 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+}
+.cguess{
+    font-size: 200%;
+}
+.headnav{
+    background:white;
+    text-align: center;
+    height:30px;
+}
+#msg{
+    width:20%;
+    display: inline-block;
+}
+button{
+    border:none;
+    background: none;
+    color:steelblue;
+    font-weight: bold;
+    font-size: inherit;
+    text-transform: uppercase;
+    height:100%;
+    outline:none;
+}
+.selected{
+    background:steelblue;
+    color:white;
+}
+button:hover{
+    background:steelblue;
+    color:white;
+    transition:background 0.3s;
+}
+body{
+    background-color:#232323;
+    margin:0;
+}
+.square{
+    width:30%;
+    background-color: purple;
+    margin:1.66%;
+    padding-bottom: 30%;
+    float:left;
+    border-radius: 15%;
+    transition:background 0.5s;
+}
