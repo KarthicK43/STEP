@@ -1,0 +1,11 @@
+img{
+	height:400px;
+	width:400px;
+	padding:10px;
+}
+li{
+	font-size:1.5rem;
+}
+body{
+	background-color:steelblue;
+}

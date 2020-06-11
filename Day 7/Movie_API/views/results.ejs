@@ -1,0 +1,10 @@
+<%- include("partials/header") %>
+
+<h1>
+	Movies Related to your search
+</h1>
+<% data["Search"].forEach(function(movie){ %>
+	<li><b><%=movie["Title"] %> - </b><%=movie["Year"] %></li>
+	<img src=<%= movie["Poster"] %>>
+<% }) %>
+<%- include("partials/footer") %>
