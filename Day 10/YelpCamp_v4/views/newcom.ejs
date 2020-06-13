@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+	<div class="row">
+		<h1 class="text-center">
+			Add a New Comment to <%=actor.name%>
+		</h1>
+		<form id="formadd" action="/actors/<%=actor._id%>/comments" method="POST">
+			<div class="form-group">
+				<input type="text" placeholder="Author Name" name="comment[author]" class="form-control">
+			</div>
+			<div class="form-group">
+                <input type="text" placeholder="Comment" name="comment[text]" class="form-control">
+			</div>
+			<div class="form-group">
+				<button id="butform" type="submit" class="btn btn-success btn-lg btn-block form-control">
+					Add Comment
+				</button>
+			</div>
+		</form>
+		<a href="/actors/<%=actor._id%>">Back</a>
+	</div>
+</div>
+<%- include("partials/footer.ejs") %>

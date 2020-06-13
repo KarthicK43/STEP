@@ -1,0 +1,28 @@
+
+div .thumbnail .col-md-6{
+    margin:50px;
+}
+#actmain{
+    display:flex; 
+    flex-wrap:wrap;
+}
+#formadd{
+    width:30%; 
+    margin:30px auto;
+}
+#butform{
+    padding:3px;
+}
+img{
+    width:100%;
+}
+div.thumbnail{
+    padding:0;
+}
+#actdesc{
+    font-size:1.5rem; 
+    margin:20px;
+}
+.butdel{
+    display: inline;
+}

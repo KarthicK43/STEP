@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+	<div class="jumbotron">
+		<div class="container">
+			<h1>
+				Welcome to Actors Repo
+			</h1>
+			<p class="lead">
+				Every actor lives more than one life
+			</p>
+			<a href="/actors/new" class="btn btn-primary btn-lg">Add a New Actor</a>
+		</div>
+	</div>
+	<div class="row text-center" id="actmain">
+		<% actors.forEach(function(actor){ %>
+			<div class="thumbnail col-md-6 col-lg-4">
+				<img src="<%= actor["image"] %>">
+				<div class="caption">
+					<h4>
+						<%= actor["name"] %>
+					</h4>
+					<a href="/actors/<%= actor._id%>" class="btn btn-primary">Description</a>
+				</div>
+			</div>
+		<% }) %>
+	</div>
+</div>
+<%- include("partials/footer.ejs") %>

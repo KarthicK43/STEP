@@ -1,0 +1,57 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<p class="lead">Actors Repo</p>
+			<div class="list-group">
+				<li class="list-group-item active">Info</li>
+				<li class="list-group-item">Info</li>
+				<li class="list-group-item">Info</li>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="thumbnail">
+				<img class="img-responsive" src="<%= actor["image"] %>">
+				<div class="caption">		
+					<h4>
+						<%= actor["name"] %>
+					</h4>
+					<p id="actdesc">
+						<%= actor["description"] %>
+					</p>
+					<p>
+						<em>Submitted by <%=actor.author.username%></em>
+					</p>
+					<%if(curuser && actor.author.id.equals(curuser._id)){%>
+						<a class="btn btn-warning" href="/actors/<%=actor._id%>/edit">Edit</a>
+						<form class="butdel" action="/actors/<%=actor._id%>/delete?_method=delete" method="POST">
+							<button type="submit" class="btn btn-danger">Delete</button>
+						</form>
+					<%}%>
+				</div>
+			</div>
+	
+	
+		<div class="well">
+			<div class="text-right">
+				<a class="btn btn-info" href="/actors/<%=actor._id%>/comments/new">Add New Comment</a>
+			</div>
+			<% actor.comments.forEach(function(comment){ %>
+				<div class="row">
+					<div class="col-md-12">
+						<p><strong><%=comment.author.username%></strong> - <%= comment.text %></p>
+						<%if(curuser && comment.author.id.equals(curuser._id)){%>
+							<a class="btn btn-warning" href="/actors/<%=actor._id%>/comments/<%=comment._id%>/edit">Edit</a>
+							<form class="butdel"action="/actors/<%=actor._id%>/comments/<%=comment._id%>/delete?_method=delete" method="POST">
+								<button type="submit" class="btn btn-danger">Delete</button>
+							</form>
+						<%}%>	
+					</div>
+				</div>
+			<% }) %>
+		</div>
+	</div>
+</div>
+	
+
+<%- include("partials/footer.ejs") %>

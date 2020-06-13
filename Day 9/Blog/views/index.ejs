@@ -1,0 +1,26 @@
+<%- include("partials/header") %>
+<div style="height:10%"></div>
+<div class="ui main text container">
+    <div class="huge header">Blog App</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <%blogs.forEach(function(blog){%>
+                <div class="item">
+                    <div class="image">
+                        <img src="<%=blog.image%>">
+                    </div>
+                    <div class="content">
+                        <a class="header" href="/show/<%=blog._id%>"><%=blog.name%></a>
+                        <div class="meta">
+                            <span><%=blog.created.toDateString()%></span>
+                        </div>
+                        <div class="description">
+                            <p><%=blog.body.substring()%></p>
+                        </div>
+                    </div>
+                </div>
+          <%  }) %>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer") %>
